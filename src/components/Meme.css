@@ -1,5 +1,8 @@
-.form-container {
+main {
   padding: 35px;
+  height: 100vh;
+}
+.form-container {
   display: grid;
   grid-template: 40px 40px/ 1fr 1fr;
   grid-template-areas:
@@ -39,4 +42,9 @@ input {
   background: linear-gradient(90deg, #711f8d 1.14%, #a818da 100%);
   border: none;
   cursor: pointer;
+}
+
+.meme-image {
+  margin-top: 35px;
+  max-width: 100%;
 }
