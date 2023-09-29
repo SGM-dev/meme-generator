@@ -1,0 +1,42 @@
+.form-container {
+  padding: 35px;
+  display: grid;
+  grid-template: 40px 40px/ 1fr 1fr;
+  grid-template-areas:
+    "top-text bottom-text"
+    "submit submit";
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  color: #0d0d0d;
+  font-size: 0.75rem;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  padding: 10px;
+}
+
+#top-text {
+  grid-area: top-text;
+}
+
+#bottom-text {
+  grid-area: bottom-text;
+}
+
+.submit-btn {
+  grid-area: submit;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -1.6px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #711f8d 1.14%, #a818da 100%);
+  border: none;
+  cursor: pointer;
+}
