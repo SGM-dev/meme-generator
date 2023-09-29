@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  gap: 5px;
+}
+
+.header--logo {
+  width: 30px;
+}
+
+.header--title {
+  margin-right: auto;
+  color: #fff;
+  font-size: 20.748px;
+  font-weight: 700;
+  letter-spacing: -2.075px;
+}
+
+.header--subtitle {
+  color: #fff;
+  text-align: right;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 15px;
+}
