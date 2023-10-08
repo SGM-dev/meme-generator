@@ -5,12 +5,20 @@ import memeData from "../memeData";
 
 export default function Meme() {
   const [meme, setMeme] = useState({
-    topText: "",
-    bottomText: "",
+    topText: "One does not simply",
+    bottomText: "Walk into Mordor",
     randomImage: "http://i.imgflip.com/1bij.jpg",
   });
 
   const [allMemeImages, setAllMemeImages] = useState(memeData);
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }));
+  }
 
   function getMemeImage(e) {
     e.preventDefault();
@@ -26,20 +34,26 @@ export default function Meme() {
         <input
           type="text"
           id="top-text"
-          name="top-text"
-          placeholder="Shut up"
+          name="topText"
+          placeholder="One does not simply"
+          onChange={handleChange}
         ></input>
         <input
           type="text"
           id="bottom-text"
-          name="bottom-text"
-          placeholder="and take my money"
+          name="bottomText"
+          placeholder="Walk into Mordor"
+          onChange={handleChange}
         ></input>
         <button type="submit" className="submit-btn" onClick={getMemeImage}>
           Get a new meme image
         </button>
       </form>
-      <img src={meme.randomImage} className="meme-image" />
+      <div className="meme">
+        <img src={meme.randomImage} className="meme-image" />
+        <h2 className="meme--text top">{meme.topText}</h2>
+        <h2 className="meme--text bottom">{meme.bottomText}</h2>
+      </div>
     </main>
   );
 }
